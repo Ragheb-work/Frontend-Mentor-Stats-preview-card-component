@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root {
+--Very-dark-blue: hsl(233, 47%, 7%);
+--Dark-desaturated-blue: hsl(244, 38%, 16%);
+--Soft-violet: hsl(277, 64%, 61%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    margin-top: -18px;
+}
+
+
+section {
+    background-color: var(--Very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .container {
+    background-color: var(--Dark-desaturated-blue);
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+@media (min-width: 650px) {
+    section .container{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 40vh;
+        overflow: hidden;
+    }
+    .container .image {
+        height: 40vh;
+        width: 100%;
+    }
+    .container .info {
+        text-align: left;
+    }
+    .info .item {
+        display: inline-block;
+        margin-right: 50px;
+        text-align: center;
+    }
+    .info .last {
+        margin-right: 0;
+    }
+
+}
+.container .image {
+    background-image: url("../images/image-header-mobile.jpg");
+    max-width: 100%;
+    min-height: 30vh;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+.container .image .overlay{
+    background-color: rgb(102, 51, 153, 65%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.container .info{
+    text-align: center;
+    padding: 25px;
+}
+.info h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.info .insights {
+    color: var(--Soft-violet);
+}
+.info p:first-of-type{
+    line-height: 1.5;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    margin-top: 15px;
+}
+.info .item :first-child {
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+.info .item :last-child {
+    color: white;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+}
